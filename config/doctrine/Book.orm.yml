@@ -1,0 +1,23 @@
+App\Entity\Book:
+    type: entity
+    repositoryClass: App\Repository\BookRepository
+    table: book
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+            nullable: false
+        author:
+            type: string
+            length: 255
+            nullable: true
+            options:
+                default: 'Anonymous'
+        release_date:
+            type: integer
+            nullable: true
